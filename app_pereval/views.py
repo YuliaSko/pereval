@@ -17,6 +17,7 @@ class CoordViewSet(viewsets.ModelViewSet):
 class PerevalViewSet(viewsets.ModelViewSet):
     queryset = Pereval.objects.all()
     serializer_class = PerevalSerializer
+    filterset_fields = ('user_id__email',)
 
     def partial_update(self, request, *args, **kwargs):
         pereval = self.get_object()
