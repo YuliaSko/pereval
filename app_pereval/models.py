@@ -7,11 +7,11 @@ class User(models.Model):
     Модель пользователя, тут хранится личная информация:
     эл. почта, ФИО, телефон
     """
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     name = models.CharField(max_length=50)
     fam = models.CharField(max_length=50)
     oct = models.CharField(max_length=50, blank=True, default=None)
-    phone = models.CharField(max_length=20, unique=True)
+    phone = models.CharField(max_length=20)
 
     def __str__(self):
         return f'{self.email} {self.name} {self.fam} {self.oct} {self.phone}'
@@ -52,7 +52,7 @@ class Pereval(models.Model):
     other_titles = models.CharField(max_length=50)
     connect = models.CharField(max_length=250)
     add_time = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=3, choices=extensions.STATUS)
+    status = models.CharField(max_length=3, choices=extensions.STATUS, default='new')
 
     level = models.ForeignKey(Level, on_delete=models.CASCADE)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
