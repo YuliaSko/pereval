@@ -33,8 +33,6 @@ class PerevalViewSet(viewsets.ModelViewSet):
                                         f'{pereval.get_status_display()}'})
 
 
-
-
 class PerevalImageViewSet(viewsets.ModelViewSet):
     queryset = PerevalImage.objects.all()
     serializer_class = PerevalImageSerializer
