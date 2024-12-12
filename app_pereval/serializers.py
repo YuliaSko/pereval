@@ -58,6 +58,7 @@ class PerevalSerializer(WritableNestedModelSerializer):
     class Meta:
         model = Pereval
         fields = [
+            'url',
             'beauty_title',
             'title',
             'other_titles',
