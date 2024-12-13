@@ -145,3 +145,9 @@ ___
  *Документация ***swagger***: http://127.0.0.1:8000/swagger/*
  
  *Документация ***redoc***: http://127.0.0.1:8000/redoc/*
+
+ ***Дополнительно:***
+
+ _**Отчет о покрытии тестами:**_
+
+![image1](https://github.com/YuliaSko/sprint/blob/master/tests.jpg?raw=true)
